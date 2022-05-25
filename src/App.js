@@ -5,7 +5,7 @@ export class App extends React.Component{
     render(){
         return (
             <div>
-                <Counter />
+                <Counter initialValue = {100} incrementAmount = {50} incrementInterval = {500}/>
             </div>
         )
     }
