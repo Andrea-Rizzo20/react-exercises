@@ -19,3 +19,5 @@ export class Counter extends React.Component {
     return <h1>{this.state.count}</h1>;
   }
 }
+
+// Yes, can be both, but if the value of the next state depends from the value of the current state we need to call setStates with the callback
