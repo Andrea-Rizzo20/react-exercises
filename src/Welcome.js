@@ -5,3 +5,9 @@ export class Welcome extends React.Component{
         return <p>Welcome, {this.props.name}!</p>
     }
 }
+
+// Yes!, we can pass default props value
+
+Welcome.defaultProps = {
+    name: 'User',
+}
