@@ -6,7 +6,10 @@ export class App extends React.Component {
     return (
       <div>
         <Hello />
+        <Hello />
       </div>
     );
   }
 }
+
+// Yes, we can use the Hello component more than once
