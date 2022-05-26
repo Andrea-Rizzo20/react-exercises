@@ -36,6 +36,15 @@ export class Counter extends React.Component {
   componentWillUnmount(){
     clearInterval(this._interval)
   }
+
+  componentDidUpdate(prevProps, prevState){
+    if(prevState.count === (this.props.initialValue * 10)){
+      this.setState((state)=>{
+        return {count: this.props.initialValue}
+      })
+
+    }
+  }
 }
 
 // Yes, can be both, but if the value of the next state depends from the value of the current state we need to call setStates with the callback
