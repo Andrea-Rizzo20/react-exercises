@@ -1,6 +1,7 @@
 import React from "react";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
 export class App extends React.Component{
     onLoginHandle = (state) =>{
@@ -11,6 +12,7 @@ export class App extends React.Component{
             <div>
                 <InteractiveWelcome />
                 <Login form={this.onLoginHandle} />
+                <UncontrolledLogin />
             </div>
         )
     }
