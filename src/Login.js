@@ -18,12 +18,17 @@ export class Login extends React.Component{
         })
     }
 
+    submitHandle = () => {
+        this.props.form(this.state)
+    }
+
     render(){
         return(
             <div>
                 <input type='text' name='username' value={this.state.username} onChange={this.inputChangeHandle}></input>
                 <input type='password' name='password' value={this.state.password} onChange={this.inputChangeHandle}></input>
                 <input type='checkbox' name='remember' checked={this.state.remember} onChange={this.inputChangeHandle}></input>
+                <button type="button" disabled={this.state.username !== '' && this.state.password !== '' ? false : true} onClick={this.submitHandle}>Login</button>
             </div>
         )
     }
