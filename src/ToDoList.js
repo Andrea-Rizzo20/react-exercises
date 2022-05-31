@@ -19,12 +19,18 @@ export class ToDoList extends React.Component {
     //   return newState;
     // });
 
-    this.setState(state =>{
-        return {
-            items:[...state.items,state.newToDo],
-            newToDo: ''
-        }
-    })
+    this.setState((state) => {
+      return {
+        items: [...state.items, state.newToDo],
+        newToDo: "",
+      };
+    });
+  };
+
+  resetListHandle = () => {
+    this.setState({
+      items: [],
+    });
   };
   render() {
     return (
@@ -46,6 +52,9 @@ export class ToDoList extends React.Component {
           onClick={this.submitButtonHandle}
         >
           Add new ToDo
+        </button>
+        <button type="button" disabled={this.state.items.length !== 0 ? false : true} onClick={this.resetListHandle}>
+          Reset List
         </button>
       </div>
     );
