@@ -29,7 +29,7 @@ resetHandle = () =>{
         return(
             <div>
                 <form onSubmit={this.submitFormHandle} ref={this._formRef}>
-                    <input type='text' name='username' required></input>
+                    <input type='text' name='username' required autoFocus></input>
                     <input type='password' name='password' required></input>
                     <input type='checkbox' name='remember'></input>
                     <button type="submit">Login</button>
