@@ -22,6 +22,7 @@ export class ToDoList extends React.Component {
     this.setState(state =>{
         return {
             items:[...state.items,state.newToDo],
+            newToDo: ''
         }
     })
   };
