@@ -32,12 +32,23 @@ export class ToDoList extends React.Component {
       items: [],
     });
   };
+
+  removeListHandle = (event) =>{
+      const removeIndex = event.target.name
+      console.log(removeIndex)
+      this.setState(state =>{
+          const newState = JSON.parse(JSON.stringify(state))
+          newState.items.splice(removeIndex < newState.items.length ? removeIndex : removeIndex -1,1)
+          return newState
+      })
+
+  }
   render() {
     return (
       <div>
         <ul>
           {this.state.items.map((name, index) => (
-            <li key={name + index}>{name}</li>
+            <li key={name + index}>{name} <button type="button" name = {index} key={index+name} onClick={this.removeListHandle}>Remove {name}</button></li>
           ))}
         </ul>
         <input
