@@ -1,5 +1,7 @@
 import React from "react";
 import { Colors } from "./Colors";
+import { ToDoList } from "./ToDoList";
+
 
 export class App extends React.Component {
   render() {
@@ -15,6 +17,7 @@ export class App extends React.Component {
             { id: 6, name: "Gray" },
           ]}
         />
+        <ToDoList />
       </div>
     );
   }
