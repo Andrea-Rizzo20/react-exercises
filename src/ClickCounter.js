@@ -15,9 +15,14 @@ export class ClickCounter extends React.Component{
     }
 
     render(){
+
+        const CounterDisplayStyle ={
+            color: 'red',
+            fontSize:'24px',
+        }
         return (
             <div>
-                <h1>Count: {this.state.counter}</h1>
+                <h1 style={CounterDisplayStyle}>Count: {this.state.counter}</h1>
                 <CounterButton onClick = {this.clickCounterHandle} />
             </div>
         )
