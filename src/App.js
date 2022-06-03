@@ -3,6 +3,7 @@ import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from "./ClickTracker";
 import { Welcome } from "./Welcome";
 import { Login } from './Login.js'
+import { Container } from "./Container";
 
 export class App extends React.Component{
     onLoginHandle = (state) =>{
@@ -10,12 +11,12 @@ export class App extends React.Component{
     }
     render(){
         return (
-            <div>
+            <Container>
                 <Welcome />
                 <ClickCounter />
                 <ClickTracker />
                 <Login form={this.onLoginHandle}/>
-            </div>
+            </Container>
         )
     }
 
