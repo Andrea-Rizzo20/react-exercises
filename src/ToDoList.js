@@ -45,7 +45,7 @@ export class ToDoList extends React.Component {
   render() {
     return (
       <div>
-        {this.props.render(this.state.items,this.removeListHandle)}
+        {this.props.children(this.state.items,this.removeListHandle)}
         <input
           type="text"
           value={this.state.newToDo}
