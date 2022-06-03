@@ -35,7 +35,6 @@ export class ToDoList extends React.Component {
 
   removeListHandle = (event) =>{
       const removeIndex = event.target.name
-      console.log(removeIndex)
       this.setState(state =>{
           const newState = JSON.parse(JSON.stringify(state))
           newState.items.splice(removeIndex < newState.items.length ? removeIndex : removeIndex -1,1)
@@ -46,11 +45,7 @@ export class ToDoList extends React.Component {
   render() {
     return (
       <div>
-        <ul>
-          {this.state.items.map((name, index) => (
-            <li key={name + index}>{name} <button type="button" name = {index} key={index+name} onClick={this.removeListHandle}>Remove {name}</button></li>
-          ))}
-        </ul>
+        {this.props.render(this.state.items,this.removeListHandle)}
         <input
           type="text"
           value={this.state.newToDo}

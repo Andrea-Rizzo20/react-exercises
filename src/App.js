@@ -17,7 +17,12 @@ export class App extends React.Component {
             { id: 6, name: "Gray" },
           ]}
         />
-        <ToDoList />
+        <ToDoList render={(items, removeListHandle) => {
+            return(
+              <ul>{items.map((name,index)=><li key={name+index}>{name} <button  onClick={removeListHandle}>Remove {name}</button></li>)}</ul>
+            )
+          }
+        } />
       </div>
     );
   }
