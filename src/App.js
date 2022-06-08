@@ -10,7 +10,7 @@ const App = () =>{
 
     return(
         <div>
-            <Counter incrementValue={2}/>
+            <Counter value={2}/>
             <Login form={onLoginHandle}/>
             <GitHubUser username='Andrea-Rizzo20'/>
             <GitHubUserList/>
