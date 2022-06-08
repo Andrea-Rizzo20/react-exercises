@@ -1,5 +1,6 @@
 import Counter from "./Counter"
 import GitHubUser from "./GitHubUser"
+import GitHubUserList from "./GitHubUserList"
 import Login from "./Login"
 
 const App = () =>{
@@ -12,6 +13,7 @@ const App = () =>{
             <Counter incrementValue={2}/>
             <Login form={onLoginHandle}/>
             <GitHubUser username='Andrea-Rizzo20'/>
+            <GitHubUserList/>
 
         </div>
     )
