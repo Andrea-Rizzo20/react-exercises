@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react"
+import useGitHubUser from "./useGitHubUser"
 
 const GitHubUser = ({username}) =>{
-    const [data, setData] = useState('')
 
-    useEffect(() =>{
-        fetch(`https://api.github.com/users/${username}`)
-        .then(data => data.json())
-        .then(response => setData(response))
-    },[username])
+    const { data, error, loading } = useGitHubUser(username)
+
     return(
         <div>
-            <h1>{data.login}</h1>
-            <p>{data.html_url}</p>
+            {loading && <h1>Loading...</h1>}
+            {data && !error && <h1>{data.login}</h1>}
+            {data && !error &&<p>{data.html_url}</p>}
+            {error && <h1>Error Try Again</h1>}
         </div>
     )
 }

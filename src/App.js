@@ -8,10 +8,7 @@ const App = () => {
   return (
     <div>
       <div>
-        <Link to="/">Home</Link>
-        <Link to="/Counter">Counter</Link>
-        <Link to="/users">User</Link>
-        <Link to="/users/Andrea-Rizzo20">Andrea Rizzo GitHub</Link>
+        <Link to="/">Home</Link> | <Link to="/Counter">Counter</Link> | <Link to="/users">User</Link> | <Link to="/users/Andrea-Rizzo20">Andrea Rizzo GitHub</Link>
       </div>
       <hr/>
       <Routes>
